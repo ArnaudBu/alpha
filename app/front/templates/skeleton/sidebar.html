@@ -1,0 +1,58 @@
+<div class="sidebar">
+    <nav class="sidebar-nav">
+
+        <ul class="nav">
+
+            <li class="nav-item nav-header">
+                    <a class="nav-link" href="/">
+                        <i class="nav-icon fas fa-home" size="2x" style="margin-right: 18px; font-size: 1.25em;vertical-align: middle;color: #73818f;"></i> Home
+                    </a>
+                </li>
+
+            {% if current_user.is_admin %}
+            <li class="nav-item nav-header no-hover open">
+                <a class="nav-link inactiveLink menu_nav active" href="">
+                    <i class="nav-icon fas fa-user-shield" size="2x" style="margin-right: 18px; font-size: 1.25em;vertical-align: middle;color: #73818f; color: #8f1745;"></i> Administration
+                </a>
+            </li>
+
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link nav-dropdown-toggle" href="#">
+                    <i class="nav-icon fas fa-rocket" size="2x" style="margin-right: 18px; font-size: 1.25em;vertical-align: middle;"></i> Users
+                </a>
+                <ul class="nav-dropdown-items" style="overflow: hidden">
+                    <li class="nav-item">
+                        <a class="nav-link pl-4 foc" href="/users">
+                                            User management
+                                        </a>
+                    </li>
+
+                </ul>
+            </li>
+            {% endif %}
+
+            <li class="nav-item nav-header no-hover open">
+                <a class="nav-link inactiveLink menu_nav active" href="">
+                    <i class="nav-icon fas fa-th-large" size="2x" style="margin-right: 18px; font-size: 1.25em;vertical-align: middle;color: #73818f; color: #8f1745;"></i> Applications
+                </a>
+            </li>
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link nav-dropdown-toggle" href="#">
+                    <i class="nav-icon fas fa-newspaper" size="2x" style="margin-right: 18px; font-size: 1.25em;vertical-align: middle;"></i> Examples
+                </a>
+                <ul class="nav-dropdown-items" style="overflow: hidden">
+                    <li class="nav-item">
+                        <a class="nav-link pl-4 foc" href="/analysis">
+                                            Dash example
+                                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+        </ul>
+        <div class="sidebar-footer">
+                <li><img src="{{ url_for('static', filename='img/alpha-full.png') }}" alt="alpha"></li>
+            </div>
+    </nav>
+</div>

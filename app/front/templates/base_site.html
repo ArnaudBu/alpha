@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    {% block head %}
+      {% block meta %}
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <link rel="icon" href="{{ url_for('static', filename='img/alpha-logo.png') }}" type="image/ico" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      {% endblock meta %}
+
+      <title>{% block title %}{% endblock %}</title>
+
+      {% block stylesheets %}
+        <!-- Bootstrap -->
+        <link href="{{ url_for('static', filename='pkg/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="{{ url_for('static', filename='pkg/font-awesome/css/all.css') }}" rel="stylesheet">
+        <!-- Core UI -->
+        <link href="{{ url_for('static', filename='pkg/coreui/css/coreui.min.css') }}" rel="stylesheet">
+        <!-- alertify-->
+        <link href="{{ url_for('static', filename='pkg/alertify/css/alertify.min.css') }}" rel="stylesheet">
+      {% endblock stylesheets %}
+
+      <!-- Custom Theme Style -->
+      <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
+
+    {% endblock head %}
+  </head>
+
+  <body class="{% block body_class %}app header-fixed aside-fixed sidebar-fixed sidebar-lg-show brand-minimized sidebar-minimized{% endblock body_class %}">
+    {% block body %}
+      <div class="app">
+
+          {% block top_navigation %}
+            {% include "skeleton/navbar.html" %}
+          {% endblock top_navigation %}
+
+          <div class="app-body">
+
+        {% block sidebar %}
+          {% include "skeleton/sidebar.html" %}
+        {% endblock sidebar %}
+
+        <main class="main">
+          <div class="ctn-main">
+          {% block content %}
+            <!-- {{ content }} -->
+          {% endblock content %}
+        </div>
+
+        </main>
+
+        </div>
+
+          <!-- Footer -->
+
+          {% block footer %}
+            <footer>
+              {% include "skeleton/footer.html" %}
+            </footer>
+          {% endblock footer %}
+
+      </div>
+
+      {% block javascripts %}
+        <!-- jQuery -->
+        <script src="{{ url_for('static', filename='pkg/jQuery/jquery.min.js') }}"></script>
+        <!-- Bootstrap -->
+        <script src="{{ url_for('static', filename='pkg/bootstrap/js/bootstrap.min.js') }}"></script>
+        <!-- Popper JS-->
+        <script src="{{ url_for('static', filename='pkg/popper/popper.min.js') }}"></script>
+        <!-- Core UI-->
+        <script src="{{ url_for('static', filename='pkg/coreui/js/coreui.min.js') }}"></script>
+        <!-- Alertify -->
+        <script src="{{ url_for('static', filename='pkg/alertify/alertify.min.js') }}"></script>
+      {% endblock javascripts %}
+
+      <!-- Custom Theme Scripts -->
+      <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+    {% endblock body %}
+
+  </body>
+</html>

@@ -1,0 +1,15 @@
+version: '3'
+services:
+  alpha:
+    restart: always
+    env_file: .env
+    build: .
+    ports:
+      - "5000:5000"
+    networks:
+      - alpha_network
+    volumes:
+      - ./app:/app
+networks:
+  alpha_network:
+    driver: bridge

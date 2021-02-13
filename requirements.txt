@@ -1,0 +1,17 @@
+werkzeug==0.16.1
+bcrypt==3.1.7
+flask==1.1.1
+flask_login==0.4.1
+flask_migrate==2.5.2
+flask_wtf==0.14.2
+flask_sqlalchemy==2.4.1
+gunicorn==19.9.0
+psycopg2-binary==2.8.4
+dash-core-components==1.14.0
+dash-html-components==1.1.1
+dash-renderer==1.8.3
+dash-table==4.11.1
+dash==1.18.0
+plotly==4.14.0
+numpy==1.19.4
+pandas==1.1.5

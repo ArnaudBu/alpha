@@ -1,0 +1,144 @@
+body, .app-header, .app {
+    min-width: 320px;
+}
+
+html , body{
+	height:100%;
+    }
+
+/* RIght button for the navbar */
+
+#navbutton {
+    background:#8f1735;
+    color: white;
+}
+
+/* Navbar */
+
+.navbar {
+    background-color: #2f353a;
+  }
+
+.app-header {
+    border-bottom: 0px solid #000000;
+    text-align: left;
+}
+
+/* Sidebar */
+
+.sidebar .nav-link.active:active , .sidebar .nav-dropdown-toggle {
+    color: #fff;
+    background: #2f353a !important;
+}
+
+.sidebar .nav-link {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.sidebar-minimized .sidebar .sidebar-nav {
+    padding-bottom: 0px;
+}
+
+.no-hover {
+    pointer-events: none !important;
+}
+
+.sidebar .nav-link {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.sidebar .nav-link.active:active, .sidebar .nav-dropdown-toggle {
+    color:#fff;
+    background:#2f353a !important;
+}
+
+.nav>li>a:hover{
+    color: #fff;
+    background: #2f353a !important;
+}
+
+.nav>li>a:focus:hover{
+    color: #fff;
+    background: #2f353a !important;
+}
+
+li.nav-item.no-hover.open>a{
+    color: #fff;
+    background: #2f353a !important;
+}
+
+.foc{
+    background-color : #23282c !important;
+}
+
+.foc:hover{
+    border-left: 4px solid #8f1745 !important;
+}
+
+.foc:focus{
+    border-left: 4px solid #8f1745 !important;
+}
+
+.foc.active{
+    background-color : #23282c !important;
+    border-left: 4px solid #8f1745 !important;
+}
+
+.menu_nav{
+    font-size: 11.2px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+li.nav-item.no-hover.open > a {
+    color: #fff;
+    background: 
+    #2f353a !important;
+}
+
+.menu_nav {
+    color:  #8f1745 !important;
+}
+.menu_nav {
+    font-size: 11.2px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.inactiveLink {
+    cursor: default;
+}
+
+.sidebar-footer{
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    bottom: 2px;
+    list-style-type: none;
+    }
+
+.sidebar-footer > li > img {
+    max-height: 90px;
+    padding-bottom: 10%;
+    margin: auto;
+}
+
+.ctn-main {
+    padding: 13px 20px 13px 20px;
+}
+
+.x_panel {
+    width: 100%;
+    padding: 10px 17px;
+    display: inline-block;
+    background: 
+#fff;
+border: 1px solid
+    #E6E9ED;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
+    opacity: 1;
+    transition: all .2s ease;
+}

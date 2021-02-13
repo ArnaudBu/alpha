@@ -1,0 +1,42 @@
+{% extends "base_site.html" %}
+
+{% block title %} Login {% endblock title %}
+
+{% block stylesheets %}
+  <!-- login.css -->
+  <link href="{{ url_for('static', filename='css/login.css') }}" rel="stylesheet">
+{% endblock stylesheets %}
+
+
+{% block body %}
+  <div class="wrapper">
+    <div class="container">
+      <h1>{{environ.get('APP_NAME', 'App Name')}}</h1>
+      <form data-parsley-validate class="form" method="post" action="api/login">
+        {% for field in login_form if field.widget.input_type != 'hidden'  %}
+          {{ field(class="form-control required", placeholder=field.label.text) }}
+        {% endfor %}
+        <button type="submit" id="login-button" name="login">Log in</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Effect in the background-->
+  <ul class="bg-bubbles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+{% endblock body %}
+
+{% block javascripts %}
+<!-- login -->
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+{% endblock javascripts %}
